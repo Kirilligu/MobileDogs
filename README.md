@@ -29,4 +29,15 @@
     "detail": "Unknown Error"
   ```
 - Регистрация пользователя
-   /users/register
+  ```
+    "first_name": "Kirill",
+    "last_name": "Deg",
+    "phone_number": "0987654321",
+    "password": "123789999"
+  ```
+    ```
+    "first_name": "Kirill",
+    "last_name": "Deg",
+    "phone_number": "0987654321"
+  ```
+- Вход пользователя
