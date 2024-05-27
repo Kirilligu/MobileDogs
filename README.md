@@ -36,9 +36,44 @@
     "password": "123789999"
   ```
 - Вход пользователя
---запрос
    ```
     "phone_number": "0987654321",
     "password": "supersecret"
-
+  ```
+- Регистрация ошейника
+   ```
+    "unique_number": "1234-5678",
+    "characteristics": "Red color, Medium size"
+  ```
+- Регистрация собаки
+   ```
+    "name": "Buddy",
+    "description": "Golden Retriever"
+  ```
+### Создание задания
+- Запрос
+   ```
+    "title": "Walk the dog",
+    "description": "Take Buddy for a walk in the park",
+    "due_date": "2024-06-01T10:00:00"
+  ```
+- Ответ
+   ```
+    "id": 1,
+    "title": "Walk the dog",
+    "description": "Take Buddy for a walk in the park",
+    "due_date": "2024-06-01T10:00:00",
+    "status": "pending"
+  ```
+- Обновление статуса задания
+   ```
+    "title": "Walk the dog",
+    "description": "Take Buddy for a walk in the park",
+    "due_date": "2024-06-01T10:00:00"
+  ```
+- Создание задания
+   ```
+    "title": "Walk the dog",
+    "description": "Take Buddy for a walk in the park",
+    "due_date": "2024-06-01T10:00:00"
   ```
