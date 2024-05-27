@@ -106,11 +106,11 @@
 1. Установите репозиторий к себе на виртуальную машину
    ```
     git clone https://github.com/Kirilligu/MobileDogs
-  ```
+    ```
 2. Перейдите в корневую папку
    ```
     cd MobileDogs
-  ```
+    ```
 3. Перед запуском установите:
    ```
     sudo apt install uvicorn
