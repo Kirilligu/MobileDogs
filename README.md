@@ -103,25 +103,26 @@
 
   ```
 ## Установка и запуск приложения
-- Установите репозиторий к себе на виртуальную машину
+1. Установите репозиторий к себе на виртуальную машину
    ```
     git clone https://github.com/Kirilligu/MobileDogs
   ```
-- Перейдите в корневую папку
+2. Перейдите в корневую папку
    ```
     cd MobileDogs
   ```
-- Перед запуском установите:
+3. Перед запуском установите:
    ```
     sudo apt install uvicorn
   ```
-- Запустите приложение
+     ```
+  sudo pip install fastapi
+  ```
+4. Запустите приложение
   ```
   uvicorn src.main:app --host 0.0.0.0 --port 8000
   ```
-  ```
-  sudo pip install fastapi
-  ```
+
 - Замените 0.0.0.0 на ip адресс вашей машины и перейдите на сайт, указав послеадреса /docs
 ![image](https://github.com/Kirilligu/MobileDogs/assets/149255706/32bddaab-de27-4bae-b178-ddff5d05b402)
 
