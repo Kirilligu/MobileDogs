@@ -115,11 +115,15 @@
   uvicorn
    ```
     sudo apt install uvicorn
-  ```
+    ```
   fastapi
-  ```
+    ```
   sudo pip install fastapi
+    ```
+  sqlalchemy
   ```
+  sudo pip install sqlalchemy
+    ```
 4. Запустите приложение
   ```
   uvicorn src.main:app --host 0.0.0.0 --port 8000
