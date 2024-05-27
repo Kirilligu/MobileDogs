@@ -112,12 +112,12 @@
     cd MobileDogs
     ```
 3. Перед запуском установите:
-   1)
+  uvicorn
    ```
     sudo apt install uvicorn
   ```
-  2)
-     ```
+  fastapi
+  ```
   sudo pip install fastapi
   ```
 4. Запустите приложение
