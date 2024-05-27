@@ -11,4 +11,4 @@ def test_register_user():
         "password": "supersecret"
     })
     assert response.status_code == 200
-    assert response.json()["first_name"] == "Kirirll"
+    assert response.json()["first_name"] == "Kirill"
