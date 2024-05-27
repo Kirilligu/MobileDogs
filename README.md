@@ -19,23 +19,5 @@
 
 
 ## Запросы
-# Регистрация нового пользователя
-POST(name: str, surname: str, phone_number: str)
-
-# Регистрация нового ошейника
-POST(serial_number: str)
-
-# Привязка ошейника к пользователю
-POST(user_id: int, collar_id: int):
-
-# Добавление собаки в избранное пользователя
-POST(user_id: int, dog_id: int):
-
-# Добавление новой собаки на карту
-POST(latitude: float, longitude: float):
-
-# Дать задание другому пользователю
-POST(user_id: int, task: str):
-
-# Верификация выполнения задания
-POST(task_id: int, photo: str):
+============
+- Успех 
