@@ -116,5 +116,6 @@
   uvicorn src.main:app --host 0.0.0.0 --port 8000
   ```
 - Замените 0.0.0.0 на ip адресс вашей машины и перейдите на сайт, указав послеадреса /docs
-![image](https://github.com/Kirilligu/MobileDogs/assets/149255706/df93a8c7-ddfa-4e68-ab0f-2c08522550ec)
+![image](https://github.com/Kirilligu/MobileDogs/assets/149255706/32bddaab-de27-4bae-b178-ddff5d05b402)
+
 
