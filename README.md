@@ -21,9 +21,10 @@
 ## Запросы
 - Успешный ответ
   ```
-  {
     "success": true,
     "exception": null
-}
-
+  ```
+- Ошибка
+  ```
+    "detail": "Unknown Error"
   ```
