@@ -105,5 +105,5 @@
 ## Установка и запуск приложения
 - Установите репозиторий к себе на виртуальную машину
    ```
-git clone https://github.com/Kirilligu/MobileDogs
+    git clone https://github.com/Kirilligu/MobileDogs
   ```
