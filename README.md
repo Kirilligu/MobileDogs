@@ -107,3 +107,11 @@
    ```
     git clone https://github.com/Kirilligu/MobileDogs
   ```
+- Перейдите в корневую папку
+   ```
+    cd MobileDogs
+  ```
+- Запустите приложение
+  ```
+  uvicorn src.main:app --host 0.0.0.0 --port 8000
+  ```
