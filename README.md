@@ -112,18 +112,23 @@
     cd MobileDogs
     ```
 3. Перед запуском установите:
-  uvicorn
+- uvicorn
    ```
     sudo apt install uvicorn
     ```
-  fastapi
+- fastapi
     ```
   sudo pip install fastapi
     ```
-  sqlalchemy
+- sqlalchemy
   ```
   sudo pip install sqlalchemy
     ```
+- passlib
+  ```
+  sudo pip install passlib
+  ```
+
 4. Запустите приложение
   ```
   uvicorn src.main:app --host 0.0.0.0 --port 8000
