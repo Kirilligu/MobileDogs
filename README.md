@@ -65,15 +65,40 @@
     "due_date": "2024-06-01T10:00:00",
     "status": "pending"
   ```
-- Обновление статуса задания
+#### Обновление статуса задания
+- Запрос
    ```
-    "title": "Walk the dog",
-    "description": "Take Buddy for a walk in the park",
-    "due_date": "2024-06-01T10:00:00"
+    "task_id": 1,
+    "status": "completed"
   ```
-- Создание задания
+- Ответ
    ```
+    "id": 1,
     "title": "Walk the dog",
     "description": "Take Buddy for a walk in the park",
-    "due_date": "2024-06-01T10:00:00"
+    "due_date": "2024-06-01T10:00:00",
+    "status": "completed"
+  ```
+#### Список заданий
+- Запрос
+   ```
+   {}
+  ```
+- Ответ
+   ```
+    {
+        "id": 1,
+        "title": "Walk the dog",
+        "description": "Take Buddy for a walk in the park",
+        "due_date": "2024-06-01T10:00:00",
+        "status": "completed"
+    },
+    {
+        "id": 2,
+        "title": "Feed the dog",
+        "description": "Give Buddy his dinner",
+        "due_date": "2024-06-01T18:00:00",
+        "status": "pending"
+    }
+
   ```
