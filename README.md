@@ -28,3 +28,5 @@
   ```
     "detail": "Unknown Error"
   ```
+- Регистрация пользователя
+   /users/register
