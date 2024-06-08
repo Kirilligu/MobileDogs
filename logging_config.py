@@ -2,6 +2,7 @@ import logging
 import socket
 from logging.handlers import RotatingFileHandler
 import os
+
 hostname = socket.gethostname()
 
 if not os.path.exists('logs'):
