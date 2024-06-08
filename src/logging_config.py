@@ -1,26 +1,37 @@
 import logging
+import sys
 import socket
-from logging.handlers import RotatingFileHandler
-import os
 
+# Get the hostname of the machine
 hostname = socket.gethostname()
 
-if not os.path.exists('logs'):
-    os.makedirs('logs')
+# Create custom loggers for different parts of the application
+app_logger = logging.getLogger("app")
+user_logger = logging.getLogger("user")
+device_logger = logging.getLogger("device")
 
-def setup_logger(logger_name, log_file, level=logging.INFO):
-    log_formatter = logging.Formatter(f'%(asctime)s - {hostname} - %(levelname)s - %(message)s')
-    log_handler = RotatingFileHandler(log_file, maxBytes=5*1024*1024, backupCount=2)
-    log_handler.setFormatter(log_formatter)
-    console_handler = logging.StreamHandler()
-    console_handler.setFormatter(log_formatter)
+# Set the logging level for each logger
+app_logger.setLevel(logging.DEBUG)
+user_logger.setLevel(logging.DEBUG)
+device_logger.setLevel(logging.DEBUG)
 
-    logger = logging.getLogger(logger_name)
-    logger.setLevel(level)
-    logger.addHandler(log_handler)
-    logger.addHandler(console_handler)
-    return logger
+# Create handlers for logging to file and console
+file_handler = logging.FileHandler("logs/app.log")
+console_handler = logging.StreamHandler(sys.stdout)
 
-app_logger = setup_logger('app_logger', 'logs/app.log')
-user_logger = setup_logger('user_logger', 'logs/user.log')
-device_logger = setup_logger('device_logger', 'logs/device.log')
+# Create a formatter with time, hostname, and log level
+formatter = logging.Formatter('%(asctime)s - {} - %(name)s - %(levelname)s - %(message)s'.format(hostname))
+
+# Set the formatter for handlers
+file_handler.setFormatter(formatter)
+console_handler.setFormatter(formatter)
+
+# Add handlers to the loggers
+app_logger.addHandler(file_handler)
+app_logger.addHandler(console_handler)
+
+user_logger.addHandler(file_handler)
+user_logger.addHandler(console_handler)
+
+device_logger.addHandler(file_handler)
+device_logger.addHandler(console_handler)
