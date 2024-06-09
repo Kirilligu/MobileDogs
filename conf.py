@@ -1,22 +1,12 @@
 # Configuration file for the Sphinx documentation builder.
-#
-# This file only contains a selection of the most common options. For a full
-# list see the documentation:
-# https://www.sphinx-doc.org/en/master/usage/configuration.html
-
-# -- Path setup --------------------------------------------------------------
 
 import os
 import sys
 sys.path.insert(0, os.path.abspath('../src'))
 
-# -- Project information -----------------------------------------------------
-
 project = 'MobileDogs'
-author = 'Kirill Degtyarev'
+author = 'Kirill Degtyariov'
 release = '0.1.0'
-
-# -- General configuration ---------------------------------------------------
 
 extensions = [
     'sphinx.ext.autodoc',
@@ -27,16 +17,20 @@ extensions = [
 templates_path = ['_templates']
 exclude_patterns = []
 
-# -- Options for HTML output -------------------------------------------------
-
 html_theme = 'alabaster'
 html_static_path = ['_static']
 
-# Fix for the warning: html_static_path entry '_static' does not exist
 if not os.path.exists('_static'):
     os.makedirs('_static')
 
-# -- Options for autodoc -----------------------------------------------------
+latex_elements = {
+    'preamble': '''
+    \\usepackage[utf8]{inputenc}
+    \\usepackage[T2A]{fontenc}
+    \\usepackage[russian,english]{babel}
+    '''
+}
+
 autodoc_member_order = 'bysource'
 autodoc_default_options = {
     'members': True,
@@ -45,7 +39,6 @@ autodoc_default_options = {
     'show-inheritance': True,
 }
 
-# -- Napoleon settings -------------------------------------------------------
 napoleon_google_docstring = True
 napoleon_numpy_docstring = True
 napoleon_include_init_with_doc = True
