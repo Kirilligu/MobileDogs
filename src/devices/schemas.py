@@ -13,7 +13,7 @@ class DogResponse(BaseModel):
     id: int
     name: str
     description: str
-    collar_id: Optional[int] = None  # Обновление: сделать это поле необязательным
+    collar_id: Optional[int] = None 
 
     class Config:
         from_attributes = True
