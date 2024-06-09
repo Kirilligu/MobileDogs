@@ -28,16 +28,18 @@ latex_elements = {
     \\usepackage[utf8]{inputenc}
     \\usepackage[T2A]{fontenc}
     \\usepackage[russian,english]{babel}
-    \\usepackage{DejaVuSans}  # Добавлено
-    \\usepackage{DejaVuSerif} # Добавлено
-    \\usepackage{DejaVuSansMono} # Добавлено
-    ''',
-    'fontpkg': '''
-    \\renewcommand{\\familydefault}{\\sfdefault}
+    \\usepackage{fontspec}
+    \\setmainfont{DejaVu Sans}
+    \\usepackage{geometry}
+    \\geometry{a4paper, margin=1in}
+    \\maxdeadcycles=1000
     ''',
     'babel': '\\usepackage[russian,english]{babel}',
     'inputenc': '\\usepackage[utf8]{inputenc}',
-    'fontenc': '\\usepackage[T2A]{fontenc}'
+    'fontenc': '\\usepackage[T2A]{fontenc}',
+    'extraclassoptions': 'openany,oneside',
+    'releasename': 'Version',
+    'maketitle': '\\sphinxmaketitle'
 }
 
 autodoc_member_order = 'bysource'
