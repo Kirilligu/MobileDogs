@@ -28,7 +28,10 @@ latex_elements = {
     \\usepackage[utf8]{inputenc}
     \\usepackage[T2A]{fontenc}
     \\usepackage[russian,english]{babel}
-    '''
+    ''',
+    'babel': '\\usepackage[russian,english]{babel}',
+    'inputenc': '\\usepackage[utf8]{inputenc}',
+    'fontenc': '\\usepackage[T2A]{fontenc}'
 }
 
 autodoc_member_order = 'bysource'
