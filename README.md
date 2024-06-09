@@ -109,8 +109,16 @@
    sudo apt install git
    git clone https://github.com/Kirilligu/MobileDogs
     ```
-   Либо же используйте следующие примеры загрузки:
-   1.
+   ### Либо же используйте следующие примеры для установки:
+```
+pip install git+https://github.com/standlab/mtracker.git#egg=mtracker
+```
+```
+pip install git+https://github.com/standlab/mtracker.git#egg=mtracker
+```
+```
+python3 setup.py install --user
+```
 3. Перейдите в корневую папку
    ```
     cd MobileDogs
