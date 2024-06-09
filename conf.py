@@ -8,7 +8,7 @@
 
 project = 'MobileDogs'
 copyright = '2024, Kirill Degtyariov'
-author = 'Your Name'
+author = 'Kirill Degtyarev'
 release = '1.0'
 
 # -- General configuration ---------------------------------------------------
