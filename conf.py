@@ -28,6 +28,12 @@ latex_elements = {
     \\usepackage[utf8]{inputenc}
     \\usepackage[T2A]{fontenc}
     \\usepackage[russian,english]{babel}
+    \\usepackage{DejaVuSans}  # Добавлено
+    \\usepackage{DejaVuSerif} # Добавлено
+    \\usepackage{DejaVuSansMono} # Добавлено
+    ''',
+    'fontpkg': '''
+    \\renewcommand{\\familydefault}{\\sfdefault}
     ''',
     'babel': '\\usepackage[russian,english]{babel}',
     'inputenc': '\\usepackage[utf8]{inputenc}',
