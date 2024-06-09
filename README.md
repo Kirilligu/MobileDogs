@@ -109,18 +109,21 @@
    sudo apt install git
    git clone https://github.com/Kirilligu/MobileDogs
     ```
-#### Либо же используйте следующие примеры для установки, в таком случае 3 пункт можно пропустить:
+#### Либо же используйте следующий пример для установки, в таком случае 3 пункт можно пропустить:
 ```
 pip install git+https://github.com/standlab/mtracker.git#egg=mtracker
 ```
-```
-python3 setup.py install --user
-```
+
 2. Перейдите в корневую папку
    ```
     cd MobileDogs
     ```
 3. Перед запуском установите:
+### Можно установить все библиотеки командой:
+```
+python3 setup.py install --user
+```
+### Либо же установить вручную
 - uvicorn
    ```
     sudo apt install uvicorn
