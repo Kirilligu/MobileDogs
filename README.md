@@ -105,13 +105,17 @@
 ## Установка и запуск приложения
 1. Установите репозиторий к себе на виртуальную машину
    ```
-    git clone https://github.com/Kirilligu/MobileDogs
+   sudo apt update
+   sudo apt install git
+   git clone https://github.com/Kirilligu/MobileDogs
     ```
-2. Перейдите в корневую папку
+   Либо же используйте следующие примеры загрузки:
+   1.
+3. Перейдите в корневую папку
    ```
     cd MobileDogs
     ```
-3. Перед запуском установите:
+4. Перед запуском установите:
 - uvicorn
    ```
     sudo apt install uvicorn
