@@ -1,5 +1,5 @@
 .. MobileDogs documentation master file, created by
-   sphinx-quickstart on Sat May 27 20:54:12 2024.
+   sphinx-quickstart on Wed May 26 2024.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
@@ -14,118 +14,53 @@ Welcome to MobileDogs's documentation!
    usage
    api
 
-Идея проекта
-------------
+Introduction
+============
 
-Идея проекта представляет собой систему мониторинга и управления за бездомными животными с использованием приложения. Основными компонентами системы являются носимые устройства - умные ошейники, снабженные различными датчиками, модулями и микроконтроллерами для отслеживания местоположения, состояния и поведения животного в реальном времени. Пользователи могут наблюдать за местоположением и состоянием собак, давать задания другим пользователям, например: проведать собаку, покормить, оказать мед.помощь.
+MobileDogs - это система мониторинга мобильных устройств, которая предоставляет ...
 
-Сценарий проекта
-----------------
+Installation
+============
 
-1. Регистрация пользователя
-   Пользователь регистрируется в приложении по имени, фамилии и номеру телефона, которые задаются в таблице Пользователей.
+Для установки MobileDogs выполните следующие шаги:
 
-2. Авторизация пользователя
-   Пользователь вводит запрос в номер телефона и пароль и получает ключ API.
+1. Установите зависимости:
+   .. code-block:: bash
 
-3. Регистрация нового ошейника и собак
-   Указывается уникальный номер и характеристики ошейника и он записывается в таблицу "ошейники". Для регистрации собаки указывается кличка собаки и ее внешнее описание, все это записывается в таблицу Dogs.
+       pip install -r requirements.txt
 
-4. Привязка ошейников к животному
-   Создается связь между ошейником и животным.
+2. Настройте конфигурацию:
+   .. code-block:: python
 
-5. Получение списка животных
-   Получение списка животных, есть возможность посмотреть местоположение по координатам.
+       import mobiledogs
+       mobiledogs.configure()
 
-6. Создание, проверка, обновление статуса задания
-   Пользователь отправляет запрос на сервер с заданием, id собаки и api пользователя для записи в таблицу Tasks. Проверка выполнения задания осуществляется с помощью отправки id задания и фото для подтверждения. Обновление статуса задания происходит с помощью отправки id задания и статуса, который записывается в соответствующую колонку таблицы Tasks.
+Usage
+=====
 
-Запросы
--------
+Используйте MobileDogs следующим образом:
 
-Успешный ответ
-::
+.. code-block:: python
 
-  "success": true,
-  "exception": null
+   import mobiledogs
+   mobiledogs.start_monitoring()
 
-Ошибка
-::
+API Reference
+=============
 
-  "detail": "Unknown Error"
+Основные классы и функции API MobileDogs:
 
-Регистрация пользователя
-::
+.. code-block:: python
 
-  "first_name": "Kirill",
-  "last_name": "Deg",
-  "phone_number": "0987654321",
-  "password": "123789999"
+   class MobileDogs:
+       def configure(self):
+           """
+           Настраивает систему мониторинга.
+           """
+           pass
 
-Вход пользователя
-::
-
- "phone_number": "0987654321",
- "password": "supersecret"
-
-Регистрация ошейника
-::
-
- "unique_number": "1234-5678",
- "characteristics": "Red color, Medium size"
-
-Регистрация собаки
-::
-
- "name": "Buddy",
- "description": "Golden Retriever"
-
-Создание задания
-::
-
-Запрос
- "title": "Walk the dog",
- "description": "Take Buddy for a walk in the park",
- "due_date": "2024-06-01T10:00:00"
-
-Ответ
- "id": 1,
- "title": "Walk the dog",
- "description": "Take Buddy for a walk in the park",
- "due_date": "2024-06-01T10:00:00",
- "status": "pending"
-
-Обновление статуса задания
-::
-
-Запрос
- "task_id": 1,
- "status": "completed"
-
-Ответ
- "id": 1,
- "title": "Walk the dog",
- "description": "Take Buddy for a walk in the park",
- "due_date": "2024-06-01T10:00:00",
- "status": "completed"
-
-Список заданий
-::
-
-Запрос
-{}
-Ответ
- {
-     "id": 1,
-     "title": "Walk the dog",
-     "description": "Take Buddy for a walk in the park",
-     "due_date": "2024-06-01T10:00:00",
-     "status": "completed"
- },
- {
-     "id": 2,
-     "title": "Feed the dog",
-     "description": "Give Buddy his dinner",
-     "due_date": "2024-06-01T18:00:00",
-     "status": "pending"
- }
+       def start_monitoring(self):
+           """
+           Запускает мониторинг устройств.
+           """
+           pass
