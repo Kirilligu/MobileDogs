@@ -8,7 +8,7 @@ setup(
     description='A FastAPI project for managing dog collars and related information',
     long_description=open('README.md').read(),
     long_description_content_type='text/markdown',
-    url='<URL>',
+    url='https://github.com/Kirilligu/MobileDogs',
     packages=find_packages(where='src'),
     package_dir={'': 'src'},
     include_package_data=True,
@@ -17,6 +17,7 @@ setup(
         'uvicorn==0.18.2',
         'sqlalchemy==1.4.36',
         'elasticsearch==8.2.1',
+        'passlib==1.7.4',
     ],
     classifiers=[
         'Programming Language :: Python :: 3',
