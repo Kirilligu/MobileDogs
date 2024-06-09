@@ -1,0 +1,4 @@
+fastapi==0.95.2
+uvicorn==0.18.2
+sqlalchemy==1.4.36
+elasticsearch==8.2.1
