@@ -111,7 +111,7 @@
     ```
 #### Либо же используйте следующий пример для установки, в таком случае 3 пункт можно пропустить:
 ```
-pip install git+https://github.com/standlab/mtracker.git#egg=mtracker
+pip install git+https://github.com/Kirilligu/MobileDogs#egg=MobileDogs
 ```
 
 2. Перейдите в корневую папку
