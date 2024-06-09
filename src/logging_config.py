@@ -1,6 +1,8 @@
 import logging
 import sys
 import socket
+from datetime import datetime
+from elasticsearch import Elasticsearch
 
 hostname = socket.gethostname()
 
@@ -28,3 +30,24 @@ user_logger.addHandler(console_handler)
 
 device_logger.addHandler(file_handler)
 device_logger.addHandler(console_handler)
+
+es = Elasticsearch(["http://localhost:9200"])
+
+class ElasticsearchHandler(logging.Handler):
+    def emit(self, record):
+        log_entry = self.format(record)
+        es.index(index="logs", body={
+            "@timestamp": datetime.utcnow().isoformat(),
+            "hostname": hostname,
+            "level": record.levelname,
+            "message": log_entry,
+            "logger": record.name
+        })
+
+es_handler = ElasticsearchHandler()
+es_handler.setLevel(logging.DEBUG)
+es_handler.setFormatter(formatter)
+
+app_logger.addHandler(es_handler)
+user_logger.addHandler(es_handler)
+device_logger.addHandler(es_handler)
