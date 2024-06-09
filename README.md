@@ -109,7 +109,7 @@
    sudo apt install git
    git clone https://github.com/Kirilligu/MobileDogs
     ```
-   ### Либо же используйте следующие примеры для установки, в таком случае 3 пункт можно пропустить:
+#### Либо же используйте следующие примеры для установки, в таком случае 3 пункт можно пропустить:
 ```
 pip install git+https://github.com/standlab/mtracker.git#egg=mtracker
 ```
