@@ -1,1 +1,24 @@
+version: 2
+
+# Build documentation in the root directory
+build:
+  image: latest
+
+  # Optionally, specify the Python version
+  python:
+    version: 3.8
+
+  # Optionally, specify the installation steps
+  install:
+    - pip install -r requirements.txt
+    - pip install -r requirements-docs.txt  # If using a separate requirements file
+
+  # Optionally, specify additional build steps
+  # build:
+  #   script:
+  #     - make html
+
+# Optionally, specify the version of Sphinx
+# build_sphinx:
+#   image: sphinxdoc/sphinx
 
