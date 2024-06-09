@@ -119,11 +119,11 @@ pip install git+https://github.com/standlab/mtracker.git#egg=mtracker
     cd MobileDogs
     ```
 3. Перед запуском установите:
-### Можно установить все библиотеки командой:
+#### Можно установить все библиотеки командой:
 ```
 python3 setup.py install --user
 ```
-### Либо же установить вручную
+#### Либо же установить вручную
 - uvicorn
    ```
     sudo apt install uvicorn
